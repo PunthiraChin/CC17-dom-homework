@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Lab09</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="enter phone number">
+        <button type="submit">Check</button>
+    </form>
+    <span></span>
+    <script>
+        //1. add event listener ไว้ที่ submit button (event="submit")
+        //2. function event listener 
+        //2.1 prevent default ไว้ก่อน เพื่อให้ยังไม่ส่ง form
+        //2.2 ดึงค่าที่อยู่ใน input ออกมา จาก event object (ลองหาดูว่า property ไหน)
+        //2.3 เอา ค่า input มา  validate condition
+        //2.4 อัพเดท textcontent ของ tag span ให้เป็น error message  จาม condition ที่เช็คได้
+
+        form = document.querySelector('form')
+        input = document.querySelector('input')
+        button = document.querySelector('button')
+        message = document.querySelector('span')
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault()
+            let inputValue = input.value
+            console.log(inputValue)
+            let returnMessage = ''
+            if(inputValue==='') returnMessage = "Phone number is required"
+            else if(Number(inputValue) === NaN) returnMessage = "Phone number is invalid"
+            else if (inputValue.length!=10) {
+                 returnMessage = "Invalid length"
+                 message.style.cssText=` color:red`
+            } else returnMessage = "Your number is valid"
+            message.textContent = returnMessage
+        })
+    </script>
+</body>
+</html>

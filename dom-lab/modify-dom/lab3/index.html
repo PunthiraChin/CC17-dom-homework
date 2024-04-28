@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="elem">
+        <li>Hello</li>
+        <li>World</li>
+      </ol>
+      <script>
+        // function clear(elem) { 
+        //     let length = elem.querySelectorAll('li').length
+        //     while (length > 0){
+        //     let list = elem.querySelector('li')    
+        //         list.remove()
+        //         length--
+        //     }
+        // }
+        
+        function clear(elem){
+            console.log(elem)
+            let list = elem.querySelectorAll('li')
+            console.log(list)
+            let numOfLi = list.length
+            for (let i=0;i<numOfLi;i++){
+                list[i].remove()
+            }
+        }
+        clear(elem); // clears the list
+
+      </script>
+    
+</body>
+</html>
+<!--  จงเขียนฟังก์ชัน clear(elem) เพื่อลบ <li> ภายใน <ol> ทั้งหมด -->

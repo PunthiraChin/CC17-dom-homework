@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07</title>
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <button>Click to hide text</button>
+    <br>
+    <h1>Text</h1>
+    <script>
+
+        const button = document.querySelector('button')
+        const text = document.querySelector('h1')
+        
+        // button.addEventListener('click',()=>{
+        //     text.setAttribute('hidden','')
+        // })
+
+        // ลอง toggle
+        button.addEventListener('click',()=>{
+            text.classList.toggle("hidden")
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div>Before Root</div>
+    <div id="root">
+        <div>Initial Root Content</div>
+    </div>
+    <div>After Root</div>
+
+
+    <script>
+        //1. Create new element
+        const newh1 = document.createElement('h1') // <h1></h1>
+        //2. Add text content to the element
+        newh1.textContent = 'Hello World' // <h1>Hello World</h1>
+        //3. Insert the element - ต้องหาตำแหน่งที่เราจะ insert >> ต้องไป select element ที่ใกล้กับจุดที่เราจะ insert มากที่สุด
+        const root = document.getElementById('root')
+        // First group - ใส่ข้างใน (เป็น child element)
+        // root.prepend(newh1) // ใส่ไว้เป็น first child
+        // root.append(newh1) // ใส่ไว้เป็น last child
+
+        // Before-After - insert ในเลเวลเดียวกัน (เป็น sibling)
+        // root.before(newh1) // ใส่ไว้เป็น element ก่อนหน้า root ใน level เดียวกัน
+        // root.after(newh1) // ใส่ไว้เป็น element หลังจาก root
+
+        //Delete and replace
+        // root.replaceWith(newh1)
+
+        //InsertAdjacent - ต้อง pass in "string" เข้าไป ไม่สามารถรับ object ได้
+        // root.insertAdjacentElement('beforebegin',newh1)
+        // root.insertAdjacentElement('afterbegin',newh1)
+        // root.insertAdjacentElement('beforeend',newh1)
+
+        
+
+    </script>
+</body>
+</html>

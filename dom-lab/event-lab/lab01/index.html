@@ -1,0 +1,3 @@
+button.addEventListener('click', () => alert('1'));  // (1) ทำได้
+button.removeEventListener('click', () => alert('1')); // (2) ทำไม่ได้ เพราะ function ที่จะ remove จะไม่ได้อ้่างอิงฟังก์ชันเดียวกันที่เคย add ไว้
+button.onclick = () => alert(2); // (3) ทำได้ เป็นวิธีการ add event listener แบบที่แอดได้แค่ 1 function

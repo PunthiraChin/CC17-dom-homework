@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab08</title>
+    <style>
+        .text-display{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <button>Hide</button>
+    <h2>This is the secret</h2>
+    <script>
+        //0. get ements ที่ต้องการ work on
+        const button = document.querySelector('button')
+        const h2 = document.querySelector('h2')
+        button.addEventListener('click',()=>{
+           // 1. toggle display ของ text
+            h2.classList.toggle("text-display")
+           // 2. เช็๋ค text ของ button ถ้าเป็น hide อยู่ ให้เปลี่ยนเป็น show  ถ้าเป็น show อยู่ ให้เปลี่ยนเป็น hide
+           if(button.textContent=="Hide") button.textContent = "Show"
+           else button.textContent = "Hide"
+        })
+    </script>
+
+</body>
+</html>

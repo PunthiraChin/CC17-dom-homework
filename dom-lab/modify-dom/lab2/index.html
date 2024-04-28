@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="main-list">
+    </ul>
+    <script>
+        let input =""
+        do{
+            input = prompt('Write Something')
+            if(input!==""&&input!==null){
+                let list = document.createElement('li')
+                list.innerHTML = input
+                console.log(list.innerHTML)
+                let ul = document.querySelector('.main-list')
+                ul.append(list)
+            }
+            else break
+        } while(true)
+    </script>
+</body>
+</html>
